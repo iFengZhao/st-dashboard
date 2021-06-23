@@ -123,9 +123,9 @@ with sb_2:
     df_worker = df.loc[df.Wrkr_ID == worker]
 
 st.sidebar.subheader("Which Dashboard?")
-option = st.sidebar.selectbox("", ('Work on cases', 'Cases overview'), 1)
+option = st.sidebar.selectbox("", ('Working on cases', 'Cases overview'), 1)
 
-if option == 'Work on cases':
+if option == 'Working on cases':
 
     data_spacer1, data_1, data_spacer2 = st.beta_columns((.15, 3.2, .15))
 
