@@ -8,7 +8,6 @@ from plotly import graph_objs as go
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 
-
 # some configuration
 st.set_page_config(layout="wide")
 
@@ -56,7 +55,7 @@ def draw_pie_chart(x, subheader, label):
     """
     Draw bar chart using matplotlib
     """
-    st.subheader("Payer Was In Prison")
+    st.subheader(subheader)
     fig, ax = plt.subplots()
     ax.pie(x, labels=label, autopct="%.1f%%")
     ax.axis('equal')
@@ -85,6 +84,7 @@ def draw_bar_chart(x, y, subheader, xlabel, ylabel):
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
     st.pyplot(fig)
+
 
 # get the data
 @st.cache
@@ -132,7 +132,8 @@ if option == 'Working on cases':
     with data_1:
         st.subheader('Your Contact List')
         filter_cases = st.multiselect('Filter your cases', ['Female payor', 'Past prisoner',
-                                                            'Payor is receiving federal benefits', 'With contempt action'])
+                                                            'Payor is receiving federal benefits',
+                                                            'With contempt action'])
         filter_dict = {'Female payor': df_worker.PayorGender == 0,
                        'Past prisoner': df_worker.PayorPrsnPast == 1,
                        'Payor is receiving federal benefits': df_worker.Payor_Receiving_Fed_Benefits != 'None',
@@ -164,7 +165,6 @@ if option == 'Working on cases':
             st.markdown(f"**The payor has paid** {round(df_case.iloc[0]['Mean_Paid_Percent'], 2) * 100}% "
                         f"**of the due amount in the past 24 months.**")
             st.markdown(f"**Payor's Payment Record:** {df_case.iloc[0]['PaymentRecord']} (0: Not Paid; 1: Paid)")
-
 
             months = get_month_format(2016, 3, 35)
             months = pd.DataFrame(months, columns=['ds'])
@@ -220,7 +220,7 @@ if option == 'Cases overview':
 
     with row2_1, _lock:
         draw_pie_chart(list(df_worker.PayorPrsnPast.value_counts()),
-                       "Payer Was In Prison",
+                       "Payor Was In Prison",
                        ["No", "Yes"])
 
     with row2_2, _lock:
@@ -236,7 +236,7 @@ if option == 'Cases overview':
 
     with row3_1, _lock:
         draw_histogram(pd.to_numeric(df_worker.Payor_Current_Age, errors='coerce'),
-                       "Payer's Age",
+                       "Payor's Age",
                        "Age",
                        "Count")
 
