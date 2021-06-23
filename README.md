@@ -1,6 +1,6 @@
 ## About
 
-This is a data visualization/forecasting web app I created for my research team using python and the streamlit library.  
+This is a data visualization/forecasting web app I created for my research team using python and the [streamlit](https://streamlit.io/) library.  
 
 The purpose of the project is to provide a light and easy-to-navigate web app for the child support field worker to work on their contact list.  
 
@@ -10,7 +10,7 @@ The app has two panels, one for case overview and another for working on specifi
 1. The case overview panel shows the text and visual summary of the selected field worker's cases.  
 2. The working on cases panel provide the whole contact list.  
    
-The contact list can be filtered and downloaded. On this panel, the worker can also choose a specific case to work on. Once a case is entered, the app will first generate a text summary of this case. Certain information will only be shown when it's in the target category. For example, only when a payor was in the prison, the information will be shown here, otherwise not.  
+The contact list can be filtered and downloaded. The worker can also choose a specific case to work on. Once a case is entered, the app will first generate a text summary of this case. Certain information will only be shown when it's in the target category. For example, only when a payor was in the prison, the information will be shown here, otherwise not.  
   
 Then, the app will generate a line chart to show the past payment record of this case. If the user hovers their mouse on the line chart, the monthly payment info will be shown.  
   
@@ -29,7 +29,8 @@ Finally, the app will generate two charts deriving from the prophet procedure, o
 
 ## Installation
 To run the app locally, the user need to install Python 3.9 and all the libraries listed above. 
-To deploy the app online, please refer to [this link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)
+To deploy the app online, please refer to [this link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099).
+
 ## Usage
 Put the example_list.csv and dashboard.py in the same directory and then run the command below in your terminal to start the app.
 
