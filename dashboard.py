@@ -147,9 +147,9 @@ if option == 'Working on cases':
         tmp_download_link = download_your_file(df_worker, f'{worker}_contact_list.csv',
                                                'Click here to download your data!')
         st.markdown(tmp_download_link, unsafe_allow_html=True)
-        st.markdown("**Enter the case number to get the case summary and the predicted payments in the next 6 months.**")
-        case = st.text_input("")
-        case_button = st.button("Get case summary")
+        st.subheader('Case Summary & Forecasting')
+        case = st.text_input("Enter a case number below.")
+        case_button = st.button("Submit")
 
         if case_button:
             df_case = df_worker[df_worker['Case_Number'] == int(case)]
