@@ -2,8 +2,9 @@
 
 This is a data visualization/forecasting web app I created for my research team using python and the [streamlit](https://streamlit.io/) library.  
 
-The purpose of the project is to provide a light and easy-to-navigate web app for the child support field workers to work on their contact list.  
+The purpose of the project is to provide a light and easy-to-navigate web app for the child support field workers to work on their contact list. 
 
+I have deployed the app to heroku. Click [this link](https://child-support-dashboard.herokuapp.com/) to check out the app.
 
 ## Functions
 The app has two panels, one for case overview and another for working on specific cases.  
