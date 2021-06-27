@@ -109,7 +109,7 @@ with title_1:
 row0_spacer1, row0_1, row0_spacer2 = st.beta_columns((.15, 3.2, .15))
 
 with row0_1:
-    st.markdown("**To begin, please first select your office number, then choose your worker ID**")
+    st.markdown("**To begin, please first select your office number, then choose your worker ID.**")
 
 sb_space1, sb_1, sb_space2, sb_2, sb_space3 = st.beta_columns((.1, 1, .1, 1, .1))
 
@@ -147,7 +147,7 @@ if option == 'Working on cases':
         tmp_download_link = download_your_file(df_worker, f'{worker}_contact_list.csv',
                                                'Click here to download your data!')
         st.markdown(tmp_download_link, unsafe_allow_html=True)
-        st.markdown("**"Enter the case number to get the case summary and the predicted payments in the next 6 months."**")
+        st.markdown("**Enter the case number to get the case summary and the predicted payments in the next 6 months.**")
         case = st.text_input("")
         case_button = st.button("Get case summary")
 
