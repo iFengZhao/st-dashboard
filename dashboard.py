@@ -101,7 +101,7 @@ def load_data(url):
 
 df = load_data('example_list.csv')
 
-title_spacer1, title_1, title_spacer2 = st.beta_columns((1.2, 3, .1))
+title_spacer1, title_1, title_spacer2 = st.beta_columns((1.2, 2.5, .1))
 
 with title_1:
     st.title("Welcome to Child Support Dashboard!")
