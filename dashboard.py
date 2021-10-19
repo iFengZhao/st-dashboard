@@ -104,7 +104,7 @@ df = load_data('example_list.csv')
 title_spacer1, title_1, title_spacer2 = st.beta_columns((1.2, 3, .1))
 
 with title_1:
-    st.title("Welcome to Px4C2 Dashboard!")
+    st.title("Welcome to Child Support Dashboard!")
 
 row0_spacer1, row0_1, row0_spacer2 = st.beta_columns((.15, 3.2, .15))
 
